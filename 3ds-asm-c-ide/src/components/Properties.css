@@ -1,0 +1,84 @@
+.properties-panel-content {
+  padding: 0;
+  font-size: 12px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.no-properties {
+  padding: 20px 12px;
+  color: #858585;
+  text-align: center;
+  font-style: italic;
+}
+
+.property-group {
+  border-bottom: 1px solid #3e3e42;
+  padding: 12px;
+}
+
+.property-label {
+  font-weight: 600;
+  color: #9cdcfe;
+  margin-bottom: 6px;
+  font-size: 11px;
+}
+
+.property-value {
+  color: #d4d4d4;
+  padding-left: 8px;
+  border-left: 2px solid #007acc;
+  font-size: 11px;
+  overflow-wrap: break-word;
+}
+
+.property-path {
+  font-family: 'Courier New', monospace;
+  font-size: 10px;
+  color: #858585;
+}
+
+.property-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.property-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #d4d4d4;
+  transition: color 0.2s;
+}
+
+.property-options label:hover {
+  color: #ffffff;
+}
+
+.property-options input[type="checkbox"],
+.property-options input[type="radio"] {
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  accent-color: #007acc;
+}
+
+.properties-panel-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.properties-panel-content::-webkit-scrollbar-track {
+  background: #252526;
+}
+
+.properties-panel-content::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+.properties-panel-content::-webkit-scrollbar-thumb:hover {
+  background: #4e4e4e;
+}

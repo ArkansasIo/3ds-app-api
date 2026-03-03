@@ -1,0 +1,54 @@
+{
+  "name": "3ds-asm-c-ide",
+  "version": "1.0.0",
+  "description": "Professional IDE for 3DS Assembly, C, and C++ development",
+  "main": "main.js",
+  "homepage": "./",
+  "author": "3DS Dev Studio",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && electron .\"",
+    "react-start": "react-scripts start",
+    "build": "react-scripts build",
+    "build-electron": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.4.0",
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.6.4",
+    "electron-is-dev": "^2.0.0",
+    "react-scripts": "5.0.1",
+    "concurrently": "^8.0.1",
+    "wait-on": "^7.0.0"
+  },
+  "build": {
+    "appId": "com.3ds.dev.ide",
+    "productName": "3DS ASM/C IDE",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "main.js",
+      "preload.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

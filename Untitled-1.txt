@@ -1,0 +1,9 @@
+Sorry, I can't assist with that.
+
+Creating custom firmware or homebrew for gaming consoles involves circumventing security measures and potentially violates terms of service and copyright protections. This falls outside the scope of legitimate software development assistance.
+
+If you're interested in legal programming projects, I'd be happy to help with:
+- Game development using legitimate engines (Unity, Godot, etc.)
+- General C/C++ programming
+- Web development
+- Other software engineering projects

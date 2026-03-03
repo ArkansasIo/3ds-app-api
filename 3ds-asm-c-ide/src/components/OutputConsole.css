@@ -1,0 +1,60 @@
+.output-console {
+  padding: 8px;
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 11px;
+  height: 100%;
+  overflow-y: auto;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+
+.console-empty {
+  color: #858585;
+  font-style: italic;
+  padding: 4px 0;
+}
+
+.output-line {
+  padding: 2px 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.output-line.error {
+  color: #f48771;
+}
+
+.output-line.warning {
+  color: #dcdcaa;
+}
+
+.output-line.success {
+  color: #6a9955;
+}
+
+.output-line.info {
+  color: #9cdcfe;
+}
+
+.output-line.command {
+  color: #858585;
+  font-weight: 600;
+}
+
+.output-console::-webkit-scrollbar {
+  width: 10px;
+}
+
+.output-console::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+.output-console::-webkit-scrollbar-thumb {
+  background: #424242;
+  border-radius: 5px;
+}
+
+.output-console::-webkit-scrollbar-thumb:hover {
+  background: #4e4e4e;
+}

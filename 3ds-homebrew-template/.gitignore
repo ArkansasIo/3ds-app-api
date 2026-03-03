@@ -1,0 +1,21 @@
+# Build artifacts
+build/
+*.o
+*.a
+*.elf
+*.3dsx
+*.map
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+*.d
