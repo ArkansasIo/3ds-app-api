@@ -9,8 +9,11 @@ int main(int argc, char* argv[])
 {
 	// Initialize console with dual screen support for 3DS XL
 	gfxInitDefault();
-	consoleInit(GFX_TOP, NULL);
-	consoleInit(GFX_BOTTOM, NULL);
+	PrintConsole topScreen;
+	PrintConsole bottomScreen;
+	consoleInit(GFX_TOP, &topScreen);
+	consoleInit(GFX_BOTTOM, &bottomScreen);
+	consoleSelect(&topScreen);
 	
 	// Initialize touchscreen
 #ifdef ENABLE_TOUCHSCREEN
@@ -59,12 +62,12 @@ int main(int argc, char* argv[])
 		}
 		
 #ifdef ENABLE_TOUCHSCREEN
-		if (touch.px > 0 && touch.py > 0)
+		if (touch.px > 0 || touch.py > 0)
 		{
-			consoleSelect(bottomScreen);
+			consoleSelect(&bottomScreen);
 			printf("\x1b[2;0H");
 			printf("Touch Input - X: %d, Y: %d     ", touch.px, touch.py);
-			consoleSelect(topScreen);
+			consoleSelect(&topScreen);
 		}
 #endif
 		

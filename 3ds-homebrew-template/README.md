@@ -1,6 +1,6 @@
-# 3DS Homebrew API Template (CFW)
+# 3DS Homebrew API Template (CFW / FBI-ready)
 
-A complete 3DS homebrew template for developing Custom Firmware compatible applications with API functionality.
+A complete 3DS homebrew template for developing Custom Firmware-compatible applications with API functionality, optimized for 3DS XL with touchscreen support.
 
 ## Requirements
 
@@ -60,10 +60,18 @@ make clean && make
 
 2. Launch from Homebrew Menu on your 3DS
 
+### FBI Notes (CFW)
+
+- This template builds a `.3dsx` homebrew app.
+- Install/use FBI on your CFW 3DS XL as usual, then place this app in the Homebrew path:
+    - `SD:/3ds/3ds-homebrew-template/3ds-homebrew-template.3dsx`
+- Launch it from Homebrew Launcher.
+
 ## Controls
 
 - **A Button** - Send API request
 - **B Button** - Check API status
+- **Touchscreen** - Shows touch coordinates on the lower screen
 - **START** - Exit to Homebrew Menu
 
 ## API Features

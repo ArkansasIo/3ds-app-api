@@ -117,6 +117,13 @@ api_status_t api_get_touch_input(api_touch_input_t *touch)
 {
 	if (!touch)
 		return API_INVALID_PARAM;
+
+	touchPosition current;
+	hidTouchRead(&current);
+
+	touch->x = current.px;
+	touch->y = current.py;
+	touch->timestamp = osGetTime();
 	
 	return API_SUCCESS;
 }
@@ -128,7 +135,10 @@ api_status_t api_is_touch_valid(void)
 {
 	if (!api_initialized)
 		return API_ERROR;
+
+	if (hidKeysHeld() & KEY_TOUCH)
+		return API_SUCCESS;
 	
-	return API_SUCCESS;
+	return API_ERROR;
 }
 #endif
